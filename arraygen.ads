@@ -11,7 +11,7 @@ package arraygen is
      type arrayrecord( size: positive) is limited private; --lehet hogy kell a limited, try later
      
      procedure insert(A:in out arrayrecord; E:in element); -- 
-     function findefficiency(A:arrayrecord; E:element) return element;
+     function findefficiency(A:arrayrecord; E:element) return integer;
 
 
 private

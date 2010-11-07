@@ -57,6 +57,22 @@ end insert;
 
 
 
+function findefficiency(A:arrayrecord; E:element) return integer is
+
+begin
+
+
+
+null;
+return 0;
+
+
+end findefficiency;
+
+
+
+
+
 end arraygen;
 
 
