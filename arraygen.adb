@@ -11,7 +11,6 @@ begin
 
           --number_of_items:=a.number_of_items+1;
           a.items(a.items'first):=E;
-          ada.Text_io.put_line("elso ertekadas");
      else
           declare
           i:integer:=a.items'last;
@@ -21,15 +20,13 @@ begin
                loop
                     i:=i-1;
                end loop;
-               last:=i+1;
-               ada.Text_io.put_line("last: "& integer'image(last));
+               last:=i+1;--utolso elem
                a.items(last):=E;
           end;
                
           declare
           Temp:element;
           begin
-               --megadja az elem helyet
                   
                
                for I in reverse a.items'first..last loop
@@ -38,7 +35,6 @@ begin
                               Temp := A.items(J);
                               A.items(J) := A.items(I);
                               A.items(I) := Temp;
-                              ada.Text_io.put_line("megtortent csere");
                          end if;
                     end loop;
                end loop;
@@ -49,7 +45,6 @@ begin
                
           
           
-          ada.Text_io.put_line("megtortent beszuras");
           
 
      end if;
@@ -92,6 +87,8 @@ begin
                   
                begin
                     howmany_loops:=howmany_loops+1;
+                   ada.text_io.put("A cilkus " & integer'image(howmany_loops) &". futasa, a " & integer'image(Center));
+                   ada.text_io.put_line(". elemmel hasonlitja a megadott elemet.");
 
                     if E = Candidate then           --ha egyenlo
                          Index := Center;                  --index
@@ -108,7 +105,7 @@ begin
                     else
                          Left := Center;                   --kulonben a hatso reszben van es a center es a right kozott keresunk tovabb
                     end if;
-                    ada.text_io.put_line(integer'image(howmany_loops));
+                    --ada.text_io.put_line(integer'image(howmany_loops));
                 end;
             
           end loop;                                  --ciklus vege
@@ -117,8 +114,8 @@ begin
      then 
           howmany_loops:=-1;
      end if;
-
-      return howmany_loops;
+     
+     return howmany_loops;
 
 
 
