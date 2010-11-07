@@ -1,0 +1,13 @@
+2. feladat
+
+Leírás: Készítsen programot a bináris keresés hatékonyságának bemutatására. Az adatokat billentyűzetről lehessen feltölteni, és az elemek a tömbbe rendezetten kerüljenek bele (pl. buborékrendezéssel). A program biztosítson lehetőséget a keresés bemutatására és a keresés végzett lépések számát írja ki. Az elemek típusa és a rajta értelmezett összehasonlító operátor a felhasználó által legyen definiálható.
+
+A megvalósítás menete:
+
+    * Készítsünk egy sablon csomagot.
+    * A csomag paramétere legyen egy elemtípus, valamint egy összehasonlító operátor: "<", továbbá az elemtípusból egy extremális érték
+    * A csomag egy átlátszatlan típust valósítson meg úgy, hogy egy diszkriminánsos rekordban elhelyezünk egy tömböt, melynek méretét a diszkrimináns adja meg.
+    * Valósítsa meg az Insert műveletet, ami rendezetten szúr be a tömbbe.
+    * Valósítsa meg a FindEfficiency műveletet, ami bináris keresést hajt végre a tömbön, visszatérő értéke pedig Integer, amely megmondja, hogy hány lépést kellett végezni a bináris keresés során. Ha nem volt ilyen, akkor ez az érték legyen negatív.
+    * A tömb az üres helyein az extremális értéket tárolja, amelyről feltesszük, hogy minden lehetséges beszúrható értéknél kisebb.
+    * Készítsen egy egyszerű tesztkörnyezetet, amellyel billentyűzetről adatokat lehet beszúrni, illetve lekérdezéseket lehet végrehajtani.
